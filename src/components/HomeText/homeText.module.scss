@@ -8,8 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
 
   span {
     color: $offwhite;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
   }
 }
