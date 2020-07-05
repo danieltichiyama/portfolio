@@ -44,3 +44,8 @@ $screen-xl-min: 1200px;
     @content;
   }
 }
+
+//border helper
+@mixin border($color: "red") {
+  border: 1px $color dotted;
+}
