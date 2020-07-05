@@ -5,7 +5,7 @@ const HomeText = props => {
   return (
     <h3 className={styles.HomeText}>
       Hi, I'm Daniel. I make websites and web applications. I like to keep
-      things simple.
+      things&nbsp;<span>simple</span>&nbsp;.
     </h3>
   )
 }
