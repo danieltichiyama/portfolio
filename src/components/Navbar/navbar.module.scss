@@ -42,12 +42,18 @@
   .sns {
     display: flex;
     list-style: none;
-    .icon {
-      height: 32px;
+
+    svg {
       width: 32px;
-      background-color: $offwhite;
-      border-radius: 2px;
+      height: 32px;
       margin: 0 12px;
+
+      &:hover {
+        cursor: pointer;
+        path {
+          fill: #e7f343;
+        }
+      }
     }
   }
 }

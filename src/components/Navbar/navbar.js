@@ -2,6 +2,11 @@ import React from "react"
 import styles from "./navbar.module.scss"
 import { Link } from "gatsby"
 
+import GitHubIcon from "../../assets/github.svg"
+import LinkedInIcon from "../../assets/linkedin.svg"
+import EmailIcon from "../../assets/mail.svg"
+import PhoneIcon from "../../assets/phone.svg"
+
 const NavBar = props => {
   return (
     <nav className={styles.Navbar}>
@@ -11,11 +16,10 @@ const NavBar = props => {
         <Link to="/images">Images</Link>
       </ul>
       <ul className={styles.sns}>
-        <li className={styles.icon}></li>
-        <li className={styles.icon}></li>
-        <li className={styles.icon}></li>
-        <li className={styles.icon}></li>
-        <li className={styles.icon}></li>
+        <GitHubIcon />
+        <LinkedInIcon />
+        <EmailIcon />
+        <PhoneIcon />
       </ul>
     </nav>
   )
