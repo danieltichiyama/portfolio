@@ -14,6 +14,7 @@ const NavBar = props => {
         <Link to="/projects">Projects</Link>
         <Link to="/designs">Designs</Link>
         <Link to="/images">Images</Link>
+        <Link to="/resume">Resume</Link>
       </ul>
       <ul className={styles.sns}>
         <GitHubIcon />
