@@ -9,24 +9,26 @@ import PhoneIcon from "../../assets/phone.svg"
 
 const NavBar = props => {
   return (
-    <nav className={styles.Navbar}>
+    <div className={styles.container}>
       <div className={styles.tab}>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
       </div>
-      <ul>
-        <Link to="/projects">Projects</Link>
-        <Link to="/designs">Designs</Link>
-        <Link to="/images">Images</Link>
-        <Link to="/resume">Resume</Link>
-      </ul>
-      <ul className={styles.sns}>
-        <GitHubIcon />
-        <LinkedInIcon />
-        <EmailIcon />
-        <PhoneIcon />
-      </ul>
-    </nav>
+      <nav className={styles.Navbar}>
+        <ul>
+          <Link to="/projects">Projects</Link>
+          <Link to="/designs">Designs</Link>
+          <Link to="/images">Images</Link>
+          <Link to="/resume">Resume</Link>
+        </ul>
+        <ul className={styles.sns}>
+          <GitHubIcon />
+          <LinkedInIcon />
+          <EmailIcon />
+          <PhoneIcon />
+        </ul>
+      </nav>
+    </div>
   )
 }
 
