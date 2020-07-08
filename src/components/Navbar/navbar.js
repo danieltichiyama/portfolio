@@ -10,6 +10,10 @@ import PhoneIcon from "../../assets/phone.svg"
 const NavBar = props => {
   return (
     <nav className={styles.Navbar}>
+      <div className={styles.tab}>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+      </div>
       <ul>
         <Link to="/projects">Projects</Link>
         <Link to="/designs">Designs</Link>
