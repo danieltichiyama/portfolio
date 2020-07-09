@@ -9,12 +9,15 @@
 
   .HomeText {
     color: black;
-    padding: 0 12px;
+    padding: 0 48px;
     margin: 0;
 
     span {
       color: $offwhite;
-      border-bottom: black 4px dashed;
+      border-bottom: black 3px dashed;
+      width: 134px;
+      display: inline-block;
+      text-align: center;
     }
   }
 }
