@@ -5,10 +5,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  position: absolute;
   bottom: 0;
   justify-content: flex-end;
   align-items: center;
+
+  @include sm {
+    height: 50vh;
+  }
 
   .tab {
     display: none;
@@ -23,7 +26,7 @@
       align-items: center;
       box-shadow: 2px 2px 0 2px rgba($color: #000000, $alpha: 0.5);
       position: absolute;
-      bottom: 43%;
+      bottom: 45%;
       z-index: 0;
 
       .line {
@@ -51,9 +54,9 @@
 
     @include sm {
       flex-direction: column;
-      height: 50%;
       padding: 12px 24px;
       z-index: 1;
+      height: 100%;
     }
 
     ul {

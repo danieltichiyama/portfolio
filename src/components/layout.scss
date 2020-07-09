@@ -640,7 +640,10 @@ footer {
 }
 
 main {
-  height: 90vh;
+  height: 100%;
   width: 100vw;
   background-color: $seagreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }

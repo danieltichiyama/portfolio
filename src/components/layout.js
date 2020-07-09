@@ -7,9 +7,10 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <>
-      <main>{children}</main>
-      <Navbar></Navbar>
-      <footer>© {new Date().getFullYear()}, Daniel Ichiyama</footer>
+      <main>
+        {children}
+        <Navbar></Navbar>
+      </main>
     </>
   )
 }
