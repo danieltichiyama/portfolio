@@ -15,6 +15,12 @@ const NavBar = props => {
     return setIsOpen(!isOpen)
   }
 
+  const handleTabKeyDown = e => {
+    if (e.key === "Enter") {
+      return toggle()
+    }
+  }
+
   useEffect(() => {
     let navbarContainer = document.querySelector("#navbar_container")
     let navBar = document.querySelector("#NavBar")
@@ -49,7 +55,14 @@ const NavBar = props => {
 
   return (
     <div className={styles.container} id="navbar_container">
-      <div className={styles.tab} onClick={toggle} id="navbar_tab">
+      <div
+        className={styles.tab}
+        onClick={toggle}
+        onKeyDown={handleTabKeyDown}
+        id="navbar_tab"
+        role="button"
+        tabIndex="0"
+      >
         <div className={styles.line}></div>
         <div className={styles.line}></div>
       </div>

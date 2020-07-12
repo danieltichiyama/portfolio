@@ -16,7 +16,7 @@ const HomeText = props => {
 
       setAdjective(adjArr[count])
       count++
-    }, 5000)
+    }, 3000)
   }, [])
 
   return (
