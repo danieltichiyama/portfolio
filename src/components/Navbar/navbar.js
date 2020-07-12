@@ -34,7 +34,7 @@ const NavBar = props => {
       if (!isOpen) {
         navbarContainer.setAttribute("style", "height: 0")
         navBar.setAttribute("style", "display:none")
-        tab.setAttribute("style", "bottom:-50px; clip-path: inset(0 0 50px 0);")
+        tab.setAttribute("style", "bottom:0px;")
       } else {
         navbarContainer.removeAttribute("style")
         navBar.removeAttribute("style")
