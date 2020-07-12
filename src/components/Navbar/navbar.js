@@ -9,6 +9,7 @@ import PhoneIcon from "../../assets/phone.svg"
 
 const NavBar = props => {
   const [isOpen, setIsOpen] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   const toggle = () => {
     return setIsOpen(!isOpen)
@@ -19,18 +20,32 @@ const NavBar = props => {
     let navBar = document.querySelector("#NavBar")
     let tab = document.querySelector("#navbar_tab")
 
-    console.log("var window.innerWidth" + "", window.innerWidth)
-    console.log("----------")
-    if (!isOpen && window.innerWidth <= 625) {
-      navbarContainer.setAttribute("style", "height: 0")
-      navBar.setAttribute("style", "display:none")
-      tab.setAttribute("style", "bottom:-50px; clip-path: inset(0 0 50px 0);")
-    } else {
+    const debounceHandleResize = debounce(() => {
+      setWindowWidth(window.innerWidth)
+    }, 10)
+
+    window.addEventListener("resize", debounceHandleResize)
+
+    if (windowWidth > 625) {
       navbarContainer.removeAttribute("style")
       navBar.removeAttribute("style")
       tab.removeAttribute("style")
+    } else {
+      if (!isOpen) {
+        navbarContainer.setAttribute("style", "height: 0")
+        navBar.setAttribute("style", "display:none")
+        tab.setAttribute("style", "bottom:-50px; clip-path: inset(0 0 50px 0);")
+      } else {
+        navbarContainer.removeAttribute("style")
+        navBar.removeAttribute("style")
+        tab.removeAttribute("style")
+      }
     }
-  }, [isOpen, window.innerWidth])
+
+    return () => {
+      window.removeEventListener("resize", debounceHandleResize)
+    }
+  }, [isOpen, windowWidth])
 
   return (
     <div className={styles.container} id="navbar_container">
@@ -54,6 +69,17 @@ const NavBar = props => {
       </nav>
     </div>
   )
+}
+
+function debounce(fn, ms) {
+  let timer
+  return () => {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  }
 }
 
 export default NavBar

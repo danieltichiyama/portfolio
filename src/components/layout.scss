@@ -647,4 +647,12 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   overflow-y: hidden;
+
+  .mobile {
+    display: none;
+
+    @include sm {
+      display: block;
+    }
+  }
 }
