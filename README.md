@@ -1,3 +1,8 @@
+## NavBar
+
+- [detecting resize](https://www.pluralsight.com/guides/re-render-react-component-on-window-resize)
+- [shape of tab](https://paulund.co.uk/how-to-create-different-shapes-in-css)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
