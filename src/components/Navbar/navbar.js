@@ -19,11 +19,13 @@ const NavBar = props => {
     let navBar = document.querySelector("#NavBar")
     let tab = document.querySelector("#navbar_tab")
 
+    console.log("var window.innerWidth" + "", window.innerWidth)
+    console.log("----------")
     if (!isOpen && window.innerWidth <= 625) {
       navbarContainer.setAttribute("style", "height: 0")
       navBar.setAttribute("style", "display:none")
       tab.setAttribute("style", "bottom:-50px; clip-path: inset(0 0 50px 0);")
-    } else if (isOpen && window.innerWidth <= 625) {
+    } else {
       navbarContainer.removeAttribute("style")
       navBar.removeAttribute("style")
       tab.removeAttribute("style")
