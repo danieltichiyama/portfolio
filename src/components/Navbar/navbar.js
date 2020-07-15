@@ -74,10 +74,18 @@ const NavBar = props => {
           <Link to="/resume">Resume</Link>
         </ul>
         <ul className={styles.sns}>
-          <GitHubIcon />
-          <LinkedInIcon />
-          <EmailIcon />
-          <PhoneIcon />
+          <a href="https://github.com/danieltichiyama" target="_blank">
+            <GitHubIcon />
+          </a>
+          <a href="https://linkedin.com/in/danieltichiyama" target="_blank">
+            <LinkedInIcon />
+          </a>
+          <a href="mailto:daniel.ichiyama@gmail.com" target="_blank">
+            <EmailIcon />
+          </a>
+          <a href="tel:8087730442">
+            <PhoneIcon />
+          </a>
         </ul>
       </nav>
     </div>

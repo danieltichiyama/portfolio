@@ -128,12 +128,10 @@
       svg {
         width: 32px;
         height: 32px;
-        margin: 0 12px;
 
         @include lg {
           width: 24px;
           height: 24px;
-          margin: 0 8px;
         }
 
         @include sm {
