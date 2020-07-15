@@ -37,10 +37,10 @@ const NavBar = props => {
       navBar.removeAttribute("style")
       tab.removeAttribute("style")
     } else {
-      if (!isOpen) {
-        navbarContainer.setAttribute("style", "height: 0")
-        navBar.setAttribute("style", "display:none")
-        tab.setAttribute("style", "bottom:0px;")
+      if (isOpen) {
+        navbarContainer.setAttribute("style", "height: 50vh;")
+        navBar.setAttribute("style", "height: 100%;padding: 12px 24px;")
+        tab.setAttribute("style", "bottom:50%;")
       } else {
         navbarContainer.removeAttribute("style")
         navBar.removeAttribute("style")
@@ -67,7 +67,7 @@ const NavBar = props => {
         <div className={styles.line}></div>
       </div>
       <nav className={styles.Navbar} id="NavBar">
-        <ul>
+        <ul id="navbar_ul">
           <Link to="/projects">Projects</Link>
           <Link to="/designs">Designs</Link>
           <Link to="/images">Images</Link>
