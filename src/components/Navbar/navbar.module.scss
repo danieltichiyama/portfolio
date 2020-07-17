@@ -8,12 +8,13 @@
   bottom: 0;
   justify-content: flex-end;
   align-items: center;
-  position: relative;
+  position: absolute;
 
   @include sm {
     height: 50vh;
     bottom: -50%;
-    transition: bottom 1s;
+    transition: bottom 1s, height 1s;
+    border: yellow dashed 1px;
   }
 
   .tab {

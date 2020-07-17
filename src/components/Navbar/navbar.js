@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import styles from "./navbar.module.scss"
 import { Link } from "gatsby"
+import { PortfolioContext } from "../PortfolioContext/portfolioContext"
 
 import GitHubIcon from "../../assets/github.svg"
 import LinkedInIcon from "../../assets/linkedin.svg"
@@ -8,11 +9,11 @@ import EmailIcon from "../../assets/mail.svg"
 import PhoneIcon from "../../assets/phone.svg"
 
 const NavBar = props => {
-  const [isOpen, setIsOpen] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const { state, dispatch } = useContext(PortfolioContext)
 
   const toggle = () => {
-    return setIsOpen(!isOpen)
+    dispatch({ type: "TOGGLE_MENU", data: null })
   }
 
   const handleTabKeyDown = e => {
@@ -23,8 +24,6 @@ const NavBar = props => {
 
   useEffect(() => {
     let navbarContainer = document.querySelector("#navbar_container")
-    let navBar = document.querySelector("#NavBar")
-    let tab = document.querySelector("#navbar_tab")
 
     const debounceHandleResize = debounce(() => {
       setWindowWidth(window.innerWidth)
@@ -35,8 +34,8 @@ const NavBar = props => {
     if (windowWidth > 625) {
       navbarContainer.removeAttribute("style")
     } else {
-      if (isOpen) {
-        navbarContainer.setAttribute("style", "bottom: 0;")
+      if (state.isOpen) {
+        navbarContainer.setAttribute("style", "bottom: 0; height: 50vh;")
       } else {
         navbarContainer.removeAttribute("style")
       }
@@ -45,7 +44,7 @@ const NavBar = props => {
     return () => {
       window.removeEventListener("resize", debounceHandleResize)
     }
-  }, [isOpen, windowWidth])
+  }, [state.isOpen, windowWidth])
 
   return (
     <div className={styles.container} id="navbar_container">

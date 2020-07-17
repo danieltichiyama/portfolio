@@ -1,17 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Navbar from "../components/Navbar/Navbar"
+import Navbar from "./Navbar/Navbar"
+import { PortfolioProvider } from "./PortfolioContext/portfolioContext"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <main>
-        {children}
-        <Navbar></Navbar>
-      </main>
-    </>
+    <PortfolioProvider>
+      <main id="main">{children}</main>
+      <Navbar></Navbar>
+    </PortfolioProvider>
   )
 }
 
