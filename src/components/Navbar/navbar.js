@@ -34,17 +34,11 @@ const NavBar = props => {
 
     if (windowWidth > 625) {
       navbarContainer.removeAttribute("style")
-      navBar.removeAttribute("style")
-      tab.removeAttribute("style")
     } else {
       if (isOpen) {
-        navbarContainer.setAttribute("style", "height: 50vh;")
-        navBar.setAttribute("style", "height: 100%;padding: 12px 24px;")
-        tab.setAttribute("style", "bottom:50%;")
+        navbarContainer.setAttribute("style", "bottom: 0;")
       } else {
         navbarContainer.removeAttribute("style")
-        navBar.removeAttribute("style")
-        tab.removeAttribute("style")
       }
     }
 

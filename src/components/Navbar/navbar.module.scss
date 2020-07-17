@@ -8,10 +8,12 @@
   bottom: 0;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 
   @include sm {
-    height: 0;
-    transition: height 1s;
+    height: 50vh;
+    bottom: -50%;
+    transition: bottom 1s;
   }
 
   .tab {
@@ -27,9 +29,8 @@
       align-items: center;
       box-shadow: 2px 2px 0 2px rgba($color: #000000, $alpha: 0.5);
       position: absolute;
-      bottom: 0;
+      bottom: 100%;
       z-index: 0;
-      transition: bottom 1s;
 
       .line {
         height: 6px;
@@ -56,11 +57,10 @@
 
     @include sm {
       flex-direction: column;
-      padding: 0 24px;
+      padding: 12px 24px;
       z-index: 1;
       height: 100%;
       overflow: hidden;
-      transition: height 1s;
     }
 
     ul {
