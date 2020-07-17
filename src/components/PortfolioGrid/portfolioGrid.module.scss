@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 12px;
+  margin-bottom: 10vh;
+
+  .sidebar {
+    grid-column: 4 / span 1;
+    grid-row: 1;
+    background-color: orange;
+  }
+}

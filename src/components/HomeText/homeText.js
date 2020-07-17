@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react"
 import styles from "./homeText.module.scss"
 
-import { PortfolioContext } from "../PortfolioContext/portfolioContext"
+import { PortfolioContext } from "../../utils/PortfolioContext/portfolioContext"
 
 const HomeText = props => {
   const [adjective, setAdjective] = useState("simple")

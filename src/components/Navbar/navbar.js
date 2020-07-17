@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react"
 import styles from "./navbar.module.scss"
 import { Link } from "gatsby"
-import { PortfolioContext } from "../PortfolioContext/portfolioContext"
+import { PortfolioContext } from "../../utils/PortfolioContext/portfolioContext"
 
 import GitHubIcon from "../../assets/github.svg"
 import LinkedInIcon from "../../assets/linkedin.svg"
@@ -61,19 +61,30 @@ const NavBar = props => {
       </div>
       <nav className={styles.Navbar} id="NavBar">
         <ul id="navbar_ul">
-          <Link to="/projects">Projects</Link>
-          <Link to="/designs">Designs</Link>
-          <Link to="/images">Images</Link>
+          <Link to="/">Home</Link>
+          <Link to="/portfolio">Portfolio</Link>
           <Link to="/resume">Resume</Link>
         </ul>
         <ul className={styles.sns}>
-          <a href="https://github.com/danieltichiyama" target="_blank">
+          <a
+            href="https://github.com/danieltichiyama"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GitHubIcon />
           </a>
-          <a href="https://linkedin.com/in/danieltichiyama" target="_blank">
+          <a
+            href="https://linkedin.com/in/danieltichiyama"
+            target="_blank"
+            rel="noreferrer"
+          >
             <LinkedInIcon />
           </a>
-          <a href="mailto:daniel.ichiyama@gmail.com" target="_blank">
+          <a
+            href="mailto:daniel.ichiyama@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <EmailIcon />
           </a>
           <a href="tel:8087730442">
