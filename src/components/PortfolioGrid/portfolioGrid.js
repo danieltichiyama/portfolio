@@ -9,22 +9,21 @@ const PortfolioGrid = props => {
 
       placeholder.setAttribute(
         "style",
-        "height: 240px;width:100%;background-color: white;"
+        "height: 240px; width: 360px; background-color: white; margin:12px;"
       )
 
       if (i % 2 === 0) {
-        placeholder.setAttribute("style", "background-color: black;")
+        placeholder.setAttribute(
+          "style",
+          "height: 240px; width: 360px; background-color: black; margin:12px;"
+        )
       }
 
       container.appendChild(placeholder)
     }
   })
 
-  return (
-    <div className={styles.container} id="portfolio_container">
-      <div className={styles.sidebar}></div>
-    </div>
-  )
+  return <div className={styles.container} id="portfolio_container"></div>
 }
 
 export default PortfolioGrid
