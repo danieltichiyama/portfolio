@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Navbar from "./Navbar/Navbar"
-import { PortfolioProvider } from "./PortfolioContext/portfolioContext"
+import Navbar from "../Navbar/Navbar"
+import { PortfolioProvider } from "../PortfolioContext/portfolioContext"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
