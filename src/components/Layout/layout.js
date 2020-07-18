@@ -8,8 +8,10 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <PortfolioProvider>
-      <main id="main">{children}</main>
-      <Navbar></Navbar>
+      <main id="main">
+        {children}
+        <Navbar></Navbar>
+      </main>
     </PortfolioProvider>
   )
 }

@@ -646,7 +646,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: hidden;
+  //needed to prevent navigation overflow
+  overflow: hidden;
+  position: relative;
+  // end
 
   .mobile {
     display: none;
