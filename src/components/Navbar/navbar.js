@@ -35,7 +35,7 @@ const NavBar = props => {
       navbarContainer.removeAttribute("style")
     } else {
       if (state.isOpen) {
-        navbarContainer.setAttribute("style", "bottom: 0; height: 50vh;")
+        navbarContainer.setAttribute("style", "bottom: 0;")
       } else {
         navbarContainer.removeAttribute("style")
       }
